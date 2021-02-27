@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
+import Form from './compenets/Form';
+
 import imagen from './cryptomonedas.png';
 
 const Container = styled.div`
@@ -46,7 +48,7 @@ function App() {
     <div>
         <Heading>Crypto-Money</Heading>
 
-       
+       <Form/>
 
         
     </div>
