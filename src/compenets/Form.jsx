@@ -25,7 +25,7 @@ const Button = styled.input`
 `
 
 
-const Form = () => {
+const Form = ({setMoney, setCryptoMoney}) => {
 
     const [cryptoList, setCryptoList] = useState([]);
 
@@ -48,9 +48,11 @@ const Form = () => {
 
             const url = 'https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=USD';
 
-            const result = await axios.get(url);
+            const respMoneys = await axios.get(url);
 
-            setCryptoList(result.data.Data);
+            console.log(respMoneys);
+
+            setCryptoList(respMoneys.data.Data);
 
         }
 
@@ -66,9 +68,10 @@ const Form = () => {
             return;
         }
 
-        setError(true);
+        setError(false);
         
-
+        setMoney(money);
+        setCryptoMoney(cryptoMoney);
 
     }
 
