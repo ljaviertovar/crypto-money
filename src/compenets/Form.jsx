@@ -23,7 +23,7 @@ const Button = styled.input`
 
 const Form = () => {
 
-    cponst MONEYS = [
+    const MONEYS = [
         {code: 'USD', name: 'USA Money'},
         {code: 'MXN', name: 'Mexican Money'},
         {code: 'EUR', name: 'Europan Money'}
